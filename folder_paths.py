@@ -30,6 +30,9 @@ folder_names_and_paths["custom_nodes"] = ([os.path.join(base_path, "custom_nodes
 
 folder_names_and_paths["hypernetworks"] = ([os.path.join(models_dir, "hypernetworks")], supported_pt_extensions)
 
+folder_names_and_paths["photomaker"] = ([os.path.join(models_dir, "photomaker")], supported_pt_extensions)
+
+
 output_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "output")
 temp_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "temp")
 input_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "input")
@@ -150,6 +153,7 @@ def get_full_path(folder_name, filename):
 def get_filename_list_(folder_name):
     global folder_names_and_paths
     output_list = set()
+    #print('##########',folder_names_and_paths)
     folders = folder_names_and_paths[folder_name]
     output_folders = {}
     for x in folders[0]:
